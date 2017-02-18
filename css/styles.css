@@ -1,0 +1,166 @@
+html,
+body {
+  background-size: contain;
+  font-family: 'Flavors', cursive;
+  height: 100%;
+  width: 100%;
+  background-color: #E73842;
+}
+
+.container {
+  height: 100%;
+  position: relative;
+}
+
+.title-block {
+  margin: 1%;
+  padding: 5px;
+}
+
+.map-title {
+  color: #0127FF;
+  font-size: 45px;
+  font-style: italic;
+  text-decoration: underline;
+  text-shadow: 2px 2px 20px #FFFFFF;
+  cursor: default;
+}
+
+.top-logo {
+  border: 5px solid #FFFFFF;
+  box-shadow: 3px 3px 15px #F3FF01;
+}
+
+.options-box {
+  margin: 2%;
+  padding: 10px;
+  border: 5px solid #FFFFFF;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px #17DABD;
+  background-image: url("https://i.ytimg.com/vi/VJzRPyu5eq0/maxresdefault.jpg");
+  background-size: 100% 100%;
+  line-height: 35px;
+}
+
+p {
+  font-family: 'Passero One', cursive;
+  color: #17DABD;
+  text-shadow: 2px 2px 3px #000000;
+  font-size: 30px;
+  font-style: italic;
+  text-align: center;
+  text-decoration: underline;
+}
+
+#list {
+  font-family: 'Gloria Hallelujah', cursive;
+  cursor: pointer;
+}
+
+.temple-names {
+  color: #F90202;
+  font-size: 30px;
+  font-weight: bolder;
+  text-shadow: 2px 2px 5px #F9F502;
+  list-style: square;
+
+}
+
+#map {
+  height: 100%;
+  margin: 2%;
+  border: 5px solid #FFFFFF;
+  box-shadow: 5px 5px 10px #17DABD;
+  border-radius: 5px;
+}
+
+#pano {
+  width: 200px;
+  height: 200px;
+  background-color: #F4F706;
+}
+
+@media only screen and (max-width: 536px) {
+  html,
+  body {
+    background-color: #E15E18;
+  }
+
+  .map-title {
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 23px;
+    color: #CBEB01;
+    text-shadow: 2px 2px #074ECA;
+  }
+
+  .top-logo {
+    box-shadow: 2px 2px 13px #000000;
+  }
+
+  .options-box {
+    background-image: url("http://image.spreadshirtmedia.com/image-server/v1/compositions/106621987/views/1,width=280,height=280,appearanceId=256,version=1440494919.png/sacred-lotus-flower-buddhist-symbol-spiritual-meditation-om-t-shirt_design.png");
+    border-color: #000000;
+    box-shadow: 2px 2px 13px #FFFFFF;
+  }
+
+  p {
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 500;
+    text-shadow: 2px 2px #074ECA;
+  }
+
+  .temple-names {
+    color: #FFDA0C;
+    text-shadow: 2px 2px #FF0101;
+    font-size: 17px;
+    font-weight: 500;
+    list-style: disc;
+  }
+
+  #map {
+    border: 5px solid #00D0F1;
+    box-shadow: 2px 2px 13px #000000;
+
+  }
+}
+
+
+@media only screen and (min-width: 537px) and (max-width: 993px) {
+  html,
+  body{
+    background-color: #8A9089;
+  }
+
+  .title-block {
+    background-color: #68C157;
+    font-size: 34px;
+    box-shadow: 3px 3px 15px #074ECA;
+  }
+
+  .map-title {
+    font-family: 'Faster One',cursive;
+    color: #FFFFFF;
+    font-weight: 500;
+    text-shadow:2px 2px #EB0FE8;
+  }
+
+  .top-logo {
+    box-shadow: 3px 3px 15px #074ECA;
+  }
+
+  .options-box {
+    background-color: #000000;
+    background-image: url("http://www.pngall.com/wp-content/uploads/2016/06/Om-PNG-Picture.png");
+    border-color: #000000;
+
+  }
+
+  .temple-names {
+    font-family: 'Caveat Brush', cursive;
+    color: #FFFFFF;
+    font-size: 20px;
+    text-shadow:2px 2px #EB0FE8;
+  }
+}

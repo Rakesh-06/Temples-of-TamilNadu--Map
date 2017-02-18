@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+    <style>
+    .map-title,p{font-style:italic;text-decoration:underline}body,html{background-size:contain;font-family:Flavors,cursive;height:100%;width:100%;background-color:#E73842}.container{height:100%;position:relative}.title-block{margin:1%;padding:5px}.map-title{color:#0127FF;font-size:45px;text-shadow:2px 2px 20px #FFF;cursor:default}.top-logo{border:5px solid #FFF;box-shadow:3px 3px 15px #F3FF01}#map,.options-box{margin:2%;box-shadow:5px 5px 10px #17DABD}.options-box{padding:10px;border:5px solid #FFF;border-radius:5px;background-image:url(https://i.ytimg.com/vi/VJzRPyu5eq0/maxresdefault.jpg);background-size:100% 100%;line-height:35px}p{font-family:'Passero One',cursive;color:#17DABD;text-shadow:2px 2px 3px #000;font-size:30px;text-align:center}#list{font-family:'Gloria Hallelujah',cursive;cursor:pointer}.temple-names{color:#F90202;font-size:30px;font-weight:bolder;text-shadow:2px 2px 5px #F9F502;list-style:square}#map{height:100%;border:5px solid #FFF;border-radius:5px}#pano{width:200px;height:200px;background-color:#F4F706}@media only screen and (max-width:536px){.map-title,p{text-shadow:2px 2px #074ECA}body,html{background-color:#E15E18}.map-title{font-family:sans-serif;font-weight:600;font-size:23px;color:#CBEB01}.temple-names,p{font-weight:500}.top-logo{box-shadow:2px 2px 13px #000}.options-box{background-image:url(http://image.spreadshirtmedia.com/image-server/v1/compositions/106621987/views/1,width=280,height=280,appearanceId=256,version=1440494919.png/sacred-lotus-flower-buddhist-symbol-spiritual-meditation-om-t-shirt_design.png);border-color:#000;box-shadow:2px 2px 13px #FFF}p{font-size:25px;font-style:italic}.temple-names{color:#FFDA0C;text-shadow:2px 2px #FF0101;font-size:17px;list-style:disc}#map{border:5px solid #00D0F1;box-shadow:2px 2px 13px #000}}@media only screen and (min-width:537px) and (max-width:993px){.title-block,.top-logo{box-shadow:3px 3px 15px #074ECA}.map-title,.temple-names{color:#FFF;text-shadow:2px 2px #EB0FE8}body,html{background-color:#8A9089}.title-block{background-color:#68C157;font-size:34px}.map-title{font-family:'Faster One',cursive;font-weight:500}.options-box{background-color:#000;background-image:url(http://www.pngall.com/wp-content/uploads/2016/06/Om-PNG-Picture.png);border-color:#000}.temple-names{font-family:'Caveat Brush',cursive;font-size:20px}}
+    </style>
+    <!-- inlining styles.css with index.html -->
+    <!--  below is the link to google fonts used in the map site-->
+    <link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Faster+One|Flavors|Gloria+Hallelujah|Passero+One" rel="stylesheet">
+    <title>My Neighborhood MAP - by RAKESH</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row title-block">
+        <div class="col-md-4">
+          <img class="top-logo img-responsive" src="imgs/heading-logo-min.jpg" alt="Tamilnadu Tourism logo">
+        </div>
+        <div class="col-md-8">
+          <span class="map-title text-uppercase"> Famous 'N' Important Temples in Tamilnadu </span>
+        </div>
+      </div>
+
+      <div class="row options-box">
+        <div class="col-md-12">
+          <p>Filter Temple : <input type="text" placeholder="Type here to Filter..." data-bind="textInput: filterInput" value=""></p>
+          <div id="list">
+            <ul class="temple-names"data-bind="foreach: filterTemple">
+              <li data-bind="text: title, click: $parent.selectTemple"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row col-md-12" id="map"></div>
+    </div>
+
+    <script src="js/library/jquery-3.1.1.min.js"></script>
+    <script src="js/library/knockout-3.4.1.js"></script>
+    <script src="js/main.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlTlQWZ5FsItbmeljvV78TwQg_QFQiBIk&libraries=geometry&callback=initMap" onerror="googleError()"></script>
+
+  </body>
+</html>
